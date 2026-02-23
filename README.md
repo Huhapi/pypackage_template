@@ -70,38 +70,6 @@ pypackage_template/
 └── README.md                     # Project overview
 ```
 
-## Development Tools
-
-### Package Management
-- **Poetry**: Dependency management and packaging
-  - Installation: `pip install poetry`
-  - Initialize: `poetry install --with dev,docs,test,build`
-  - Virtual Environment: `poetry shell`
-
-### Testing
-- **pytest**: Test framework with plugins
-  - Run tests: `poetry run pytest`
-  - Coverage: `poetry run pytest --cov`
-  - Parallel testing: `poetry run pytest -n auto`
-
-### Documentation
-- **Sphinx**: Documentation generator
-  - Build docs: `cd docs && poetry run make html`
-  - Live preview: `cd docs && poetry run make livehtml`
-
-### Code Quality
-- **black**: Code formatting
-- **flake8**: Code linting
-- **mypy**: Type checking
-- **bandit**: Security checks
-- **pre-commit**: Git hooks
-  - Install hooks: `pre-commit install --install-hooks`
-
-### Version Management
-- **poetry-dynamic-versioning**: Automatic versioning
-  - Based on git tags
-  - Automatically updates `__version__`
-
 ## Required Customization
 
 ### Files to Modify
@@ -129,6 +97,7 @@ pypackage_template/
 
 ### Quick Start
 Use the provided customization script:
+- Mac OS
 ```bash
 python scripts/customize_template.py \
     --name "your-package-name" \
@@ -137,6 +106,50 @@ python scripts/customize_template.py \
     --description "Your package description" \
     --github-username "your-github-username"
 ```
+- Windows
+'''python scripts/customize_template.py `
+    --name "your-package-name" `
+    --author "Your Name" `
+    --email "your.email@example.com" `
+    --description "Your package description" `
+    --github-username "your-github-username"
+  '''
+
+## Development Tools
+
+### Package Management
+- **Poetry**: Dependency management and packaging
+  - Installation: `pip install poetry`
+  - Initialize: `poetry install --with dev,docs,test,build`
+  - Virtual Environment: `poetry shell`
+
+### Testing
+- **pytest**: Test framework with plugins
+  - Run tests: `poetry run pytest`
+  - Coverage: `poetry run pytest --cov`
+  - Parallel testing: `poetry run pytest -n auto`
+
+### Documentation
+- **Sphinx**: Documentation generator
+- Mac OS
+  - Build docs: `cd docs && poetry run make html`
+  - Live preview: `cd docs && poetry run make livehtml`
+- Windows
+  - Build docs: `cd docs && poetry run make.bat html`
+  - Live preview: `cd docs && poetry run make.bat livehtml`
+
+### Code Quality
+- **black**: Code formatting
+- **flake8**: Code linting
+- **mypy**: Type checking
+- **bandit**: Security checks
+- **pre-commit**: Git hooks
+  - Install hooks: `pre-commit install --install-hooks`
+
+### Version Management
+- **poetry-dynamic-versioning**: Automatic versioning
+  - Based on git tags
+  - Automatically updates `__version__`
 
 ## Development Commands
 
