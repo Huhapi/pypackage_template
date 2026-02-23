@@ -12,10 +12,10 @@ def update_file_content(file_path: Path, replacements: Dict[str, str]) -> None:
     if not file_path.exists():
         return
     
-    content = file_path.read_text()
+    content = file_path.read_text(encoding="utf-8")
     for old, new in replacements.items():
         content = content.replace(old, new)
-    file_path.write_text(content)
+    file_path.write_text(content, encoding="utf-8")
 
 def update_directory_name(old_name: str, new_name: str, base_path: Path) -> None:
     """Rename directory while maintaining its contents."""
